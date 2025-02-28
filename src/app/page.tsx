@@ -1,29 +1,25 @@
-import Link from 'next/link';
+import { Container, Link, Stack, Typography } from '@mui/material';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center p-24'>
-      <div>
-        <span>Hello, my name is</span>
-      </div>
-      <div className='text-3xl font-bold'>
-        <span>Jared Craig</span>
-      </div>
-      <div>
-        <span>Here are a few of my projects:</span>
-      </div>
-      <div className='flex flex-col items-center justify-between p-24'>
-        <div className='text-2xl font-semibold p-8'>
-          <Link href='https://hotsgg.com/' target='_blank'>
-            HotsGG
-          </Link>
-        </div>
-        <div className='text-2xl font-semibold p-8'>
-          <Link href='https://glb2.app/' target='_blank'>
-            GLB2GM
-          </Link>
-        </div>
-      </div>
-    </main>
+    <Container maxWidth='xl'>
+      <Stack spacing={1} sx={{ p: 4, alignItems: 'center', textAlign: 'center' }}>
+        <Typography variant='h6' sx={{ textShadow: '2px 2px 2px rgba(0, 0, 0, 1)' }}>
+          Hello, my name is
+        </Typography>
+        <Typography variant='h3' sx={{ textShadow: '2px 2px 2px rgba(0, 0, 0, 1)' }}>
+          Jared Craig
+        </Typography>
+        <Typography variant='h6' sx={{ textShadow: '2px 2px 2px rgba(0, 0, 0, 1)' }}>
+          Here are a few of my full-stack projects:
+        </Typography>
+        <Link href='https://hotsgg.com/' target='_blank' rel='noopener' variant='h6' color='inherit' sx={{ textShadow: '1px 1px 1px rgba(0, 0, 0, 1)' }}>
+          HotsGG
+        </Link>
+        <Link href='https://glb2.app/' target='_blank' rel='noopener' variant='h6' color='inherit' sx={{ textShadow: '1px 1px 1px rgba(0, 0, 0, 1)' }}>
+          GLB2GM
+        </Link>
+      </Stack>
+    </Container>
   );
 }
