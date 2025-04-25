@@ -1,6 +1,6 @@
 import { Container, Grid, Stack, Typography } from '@mui/material';
-import ProjectCard from '@/app/project/components/ProjectCard';
-import { PROJECTS } from '@/app/project/projects';
+import ProjectCard from '@/app/projects/components/ProjectCard';
+import { PROJECTS } from '@/app/projects/projects';
 import Profile from '@/app/profile/components/Profile';
 
 export default function Home() {
@@ -13,7 +13,9 @@ export default function Home() {
         </Typography>
         <Grid container>
           {PROJECTS.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <Grid key={project.title} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
+              <ProjectCard {...project} />
+            </Grid>
           ))}
         </Grid>
       </Stack>
