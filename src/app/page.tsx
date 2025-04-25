@@ -1,24 +1,21 @@
-import { Container, Link, Stack, Typography } from '@mui/material';
+import { Container, Grid, Stack, Typography } from '@mui/material';
+import ProjectCard from '@/app/project/components/ProjectCard';
+import { PROJECTS } from '@/app/project/projects';
+import Profile from '@/app/profile/components/Profile';
 
 export default function Home() {
   return (
-    <Container maxWidth='xl'>
-      <Stack spacing={1} sx={{ p: 4, alignItems: 'center', textAlign: 'center' }}>
-        <Typography variant='h6' sx={{ textShadow: '2px 2px 2px rgba(0, 0, 0, 1)' }}>
-          Hello, my name is
+    <Container maxWidth='xl' sx={{ p: 4 }}>
+      <Stack spacing={2} sx={{ alignItems: 'center', textAlign: 'center' }}>
+        <Profile />
+        <Typography variant='subtitle1' sx={{ mb: 2 }}>
+          Here are a few of my projects:
         </Typography>
-        <Typography variant='h3' sx={{ textShadow: '2px 2px 2px rgba(0, 0, 0, 1)' }}>
-          Jared Craig
-        </Typography>
-        <Typography variant='h6' sx={{ textShadow: '2px 2px 2px rgba(0, 0, 0, 1)' }}>
-          Here are a few of my full-stack projects:
-        </Typography>
-        <Link href='https://hotsgg.com/' target='_blank' rel='noopener' variant='h6' color='inherit' sx={{ textShadow: '1px 1px 1px rgba(0, 0, 0, 1)' }}>
-          HotsGG
-        </Link>
-        <Link href='https://glb2.app/' target='_blank' rel='noopener' variant='h6' color='inherit' sx={{ textShadow: '1px 1px 1px rgba(0, 0, 0, 1)' }}>
-          GLB2GM
-        </Link>
+        <Grid container>
+          {PROJECTS.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </Grid>
       </Stack>
     </Container>
   );
