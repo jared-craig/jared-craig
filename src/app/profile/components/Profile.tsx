@@ -11,8 +11,7 @@ export default function Profile() {
           width: 150,
           height: 150,
           mb: 2,
-          border: '2px solid',
-          borderColor: 'primary.main',
+          border: '4px solid white',
         }}
       />
       <Typography sx={{ typography: { xs: 'h3', sm: 'h2' } }}>
