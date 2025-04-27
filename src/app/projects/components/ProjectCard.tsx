@@ -11,8 +11,7 @@ export default function ProjectCard(project: Project) {
       direction='column'
       spacing={2}
       sx={{
-        height: 400,
-        m: 2,
+        minHeight: 500,
         p: 2,
         backgroundColor: grey[900],
         border: '4px solid white',
@@ -20,16 +19,15 @@ export default function ProjectCard(project: Project) {
         justifyContent: 'space-between',
       }}
     >
-      <Box sx={{ position: 'relative', width: '100%', height: 200 }}>
-        <Image
-          src={image}
-          alt={`${title} icon`}
-          fill
-          sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'}
-          priority
-          style={{ objectFit: 'contain' }}
-        />
-      </Box>
+      <Image
+        src={image}
+        alt={`${title} icon`}
+        height={200}
+        width={300}
+        sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'}
+        priority
+        style={{ objectFit: 'contain' }}
+      />
       <Typography variant='h5' component='div' sx={{ textAlign: 'center' }}>
         {title}
       </Typography>

@@ -11,7 +11,7 @@ export default function Home() {
         <Typography variant='subtitle1' sx={{ mb: 2 }}>
           Here are a few of my projects:
         </Typography>
-        <Grid container>
+        <Grid container spacing={2}>
           {PROJECTS.map((project) => (
             <Grid key={project.title} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
               <ProjectCard {...project} />
