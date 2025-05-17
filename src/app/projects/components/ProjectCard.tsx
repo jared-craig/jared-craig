@@ -17,6 +17,7 @@ export default function ProjectCard(project: Project) {
         border: '4px solid white',
         borderRadius: 4,
         justifyContent: 'space-between',
+        alignItems: 'center',
       }}
     >
       <Image
@@ -31,33 +32,15 @@ export default function ProjectCard(project: Project) {
       <Typography variant='h5' component='div' sx={{ textAlign: 'center' }}>
         {title}
       </Typography>
-      <Typography
-        variant='body2'
-        color='text.secondary'
-        sx={{ textAlign: 'center' }}
-      >
+      <Typography variant='body2' color='text.secondary' sx={{ textAlign: 'center' }}>
         {description}
       </Typography>
-      <Typography
-        variant='body2'
-        color='text.secondary'
-        sx={{ textAlign: 'center' }}
-      >
+      <Typography variant='body2' color='text.secondary' sx={{ textAlign: 'center' }}>
         {techStack.join(', ')}
       </Typography>
-      <Typography
-        variant='body2'
-        color='text.secondary'
-        sx={{ textAlign: 'center' }}
-      >
+      <Typography variant='body2' color='text.secondary' sx={{ textAlign: 'center' }}>
         {link && (
-          <Button
-            size='small'
-            href={link}
-            target='_blank'
-            rel='noopener'
-            sx={{ m: 1 }}
-          >
+          <Button size='small' href={link} target='_blank' rel='noopener' sx={{ m: 1 }}>
             View Project
           </Button>
         )}
