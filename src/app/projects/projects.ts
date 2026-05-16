@@ -3,7 +3,7 @@ import { Project } from '@/app/projects/types/project';
 export const PROJECTS: Project[] = [
   {
     title: 'Easy Weather',
-    description: 'A mobile weather app with a clean and minimalist design. On the Play Store soon (in closed testing)!',
+    description: 'A mobile weather app with a clean and minimalist design. On the Play Store!',
     techStack: ['React Native', 'Typescript', 'React Query', 'Expo'],
     link: 'https://play.google.com/store/apps/details?id=com.madkingcraig.easyweather&hl=en_US/',
     image: '/easyweather-icon.png',
